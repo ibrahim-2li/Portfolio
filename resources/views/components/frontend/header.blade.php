@@ -4,7 +4,7 @@
     :class="scrollBg ? 'bg-light-primary dark:bg-dark-primary' : 'bg-white dark:border-gray-700'"
     >
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="{{route('dashboard')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/img/logo.png" class="h-9" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portfolio</span>
         </a>

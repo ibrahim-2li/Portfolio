@@ -1,6 +1,6 @@
 @props(['project'])
-<a x-data="{ skill: {{ json_encode($project->skill) }} }" href="{{ $project->project_url }}" target="_blank"
-    :class="selectedTab == 'all' || selectedTab == skill.id ? 'block' : 'hidden'"
+<a x-data="{skill: {{ json_encode($project->skill) }} }" href="{{ $project->project_url }}" target="_blank"
+    :class="selectedTab == 'all' || selectedTab == projectSkill.id ? 'block' : 'hidden'"
     class="group w-auto max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
     <img class="object-cover object-center w-full h-56 ease-in duration-100 group-hover:scale-105"
         src="{{ asset('storage/' . $project->image) }}" alt="avatar">

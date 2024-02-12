@@ -5,14 +5,14 @@
             <li class="cursor-pointer capitalize m-4">
                 <button @click="selectedTab = 'all' "
                     class="w-32 text-center px-4 py-2 bg-red-500 dark:bg-red-500 hover:bg-light-tail-500 text-white rounded-md transition"
-                    :class="selectTab == 'all' ? 'bg-light-tail-500' : ''"
+                    :class="selectedTab == 'all' ? 'bg-light-tail-500' : ''"
                     >All</button>
             </li>
             @foreach ($skills as $projectSkill)
-                <li class="cursor-pointer capitalize m-4" x-data="{ projectSkill: {{ json_encode($projectSkill) }} }">
+                <li class="cursor-pointer capitalize m-4" x-data="{projectSkill: {{ json_encode($projectSkill) }} }">
                     <button @click="selectedTab = projectSkill.id "
                         class="w-32 text-center px-4 py-2 bg-red-500 dark:bg-red-500 hover:bg-light-tail-500 text-white rounded-md transition"
-                        :class="selectTab == projectSkill.id ? 'bg-light-tail-500' : ''"
+                        :class="selectedTab == projectSkill.id ? 'bg-light-tail-500' : ''"
                         >{{ $projectSkill->name }}</button>
                 </li>
             @endforeach
